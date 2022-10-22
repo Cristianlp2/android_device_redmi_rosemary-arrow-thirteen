@@ -1,0 +1,48 @@
+[
+  {
+    "repository": "windowz414/android_kernel_redmi_rosemary",
+    "target_path": "kernel/redmi/rosemary",
+    "branch": "lineage-20.0"
+  },
+  {
+    "repository": "windowz414/android_vendor_redmi_rosemary",
+    "target_path": "vendor/redmi/rosemary",
+    "branch": "lineage-20.0"
+  },
+  {
+    "repository": "windowz414/android_device_redmi_rosemary-firmware",
+    "target_path": "device/redmi/rosemary-firmware",
+    "branch": "eleven"
+  },
+  {
+    "repository": "PixelExperience/vendor_mediatek-opensource",
+    "target_path": "vendor/mediatek/opensource",
+    "branch": "thirteen"
+  },
+  {
+    "repository": "Woomymy/vendor_mediatek_interfaces",
+    "target_path": "vendor/mediatek/interfaces",
+    "branch": "twelve"
+  },
+  {
+    "repository": "PixelExperience/device_mediatek_common",
+    "target_path": "device/mediatek/common",
+    "branch": "thirteen"
+  },
+  {
+    "repository": "PixelExperience/device_mediatek_sepolicy_vndr",
+    "target_path": "device/mediatek/sepolicy_vndr",
+    "branch": "thirteen"
+  },
+  {
+    "repository": "windowz414/lineage_hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch": "lineage-20.0"
+  },
+  {
+    "repository": "PixelBoot/android_prebuilts_clang_host_linux-x86_clang-r416183b1",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-r416183b1",
+    "branch": "arrow-11.0",
+    "clone_depth": "1"
+  }
+]
