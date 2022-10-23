@@ -21,13 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device tree
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Common PE configs
-$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-TARGET_SUPPORTS_CALL_RECORDING := true
-TARGET_USES_AOSP_RECOVERY := true
+
 
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
