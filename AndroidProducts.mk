@@ -1,5 +1,5 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/evolution_rosemary.mk
+	$(LOCAL_DIR)/corvus_rosemary.mk
 
 COMMON_LUNCH_CHOICES := \
-    $(foreach variant, user userdebug eng, evolution_rosemary-$(variant))
+    $(foreach variant, user userdebug eng, corvus_rosemary-$(variant))
