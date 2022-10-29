@@ -58,11 +58,12 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio@5.0.vendor \
     android.hardware.bluetooth.a2dp@1.0.vendor \
-    android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.broadcastradio@1.0.vendor \
     android.hardware.broadcastradio@1.1.vendor \
     android.hardware.broadcastradio@2.0.vendor \
     android.hardware.bluetooth@1.0.vendor \
+    audio.a2dp.default \
     audio.primary.default \
     audio.r_submix.default \
     audio_policy.stub \
@@ -351,6 +352,7 @@ PRODUCT_COPY_FILES += \
 
 # IMS
 PRODUCT_BOOT_JARS += \
+    ImsServiceBase \
     mediatek-common \
     mediatek-framework \
     mediatek-ims-base \
@@ -403,8 +405,12 @@ PRODUCT_COPY_FILES += \
 
 # Overridden props
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-include $(DEVICE_PATH)/props/overrides.mk
 
+# MTK In-Call volumes adjusting service
+PRODUCT_PACKAGES += \
+    MtkInCallService
+
+# IMS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
@@ -459,10 +465,6 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     vendor.ueventd.rc
 
-PRODUCT_PACKAGES += \
-    init.rosemary.incall_fixup.rc \
-    init.rosemary.incall_fixup.sh
-
 # Ramdisk For Kernel
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6785:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6785
@@ -481,7 +483,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay-aosp
+    $(DEVICE_PATH)/overlay-kscope
 
 # Sensors
 PRODUCT_PACKAGES += \
