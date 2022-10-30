@@ -350,6 +350,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_rosemary/android.hardware.nfc.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_rosemary/android.hardware.se.omapi.uicc.xml
 
+# MTK In-Call volumes adjusting service
+PRODUCT_PACKAGES += \
+    MtkInCallService
+
 # IMS
 PRODUCT_BOOT_JARS += \
     mediatek-common \
