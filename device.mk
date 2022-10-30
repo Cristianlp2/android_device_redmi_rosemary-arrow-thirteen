@@ -352,7 +352,6 @@ PRODUCT_COPY_FILES += \
 
 # IMS
 PRODUCT_BOOT_JARS += \
-    ImsServiceBase \
     mediatek-common \
     mediatek-framework \
     mediatek-ims-base \
@@ -406,11 +405,6 @@ PRODUCT_COPY_FILES += \
 # Overridden props
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
-# MTK In-Call volumes adjusting service
-PRODUCT_PACKAGES += \
-    MtkInCallService
-
-# IMS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling \
@@ -465,6 +459,10 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     vendor.ueventd.rc
 
+PRODUCT_PACKAGES += \
+    init.rosemary.incall_fixup.rc \
+    init.rosemary.incall_fixup.sh
+
 # Ramdisk For Kernel
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6785:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6785
@@ -483,7 +481,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay-kscope
+    $(DEVICE_PATH)/overlay-aosp
 
 # Sensors
 PRODUCT_PACKAGES += \

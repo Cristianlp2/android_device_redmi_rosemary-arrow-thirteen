@@ -32,6 +32,9 @@
 /dev/elliptic0 u:object_r:sensor_device:s0
 /dev/elliptic1 u:object_r:sensor_device:s0
 
+# Incall fixup
+/(vendor|system/vendor)/bin/init\.rosemary\.incall_fixup\.sh u:object_r:incall_fixup_exec:s0
+
 # Payement
 /(vendor|system/vendor)/bin/mlipayd(@1\.1)? u:object_r:hal_mlipay_default_exec:s0
 
