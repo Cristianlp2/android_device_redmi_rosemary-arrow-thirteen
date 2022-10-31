@@ -1,5 +1,13 @@
 <compatibility-matrix version="2.0" type="framework">
     <hal format="hidl" optional="true">
+        <name>android.frameworks.sensorservice</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISensorManager</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>android.hardware.biometrics.fingerprint</name>
         <version>2.0-3</version>
         <interface>
@@ -56,7 +64,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.wifi</name>
-        <version>1.0-5</version>
+        <version>1.0-6</version>
         <interface>
             <name>IWifi</name>
             <instance>default</instance>

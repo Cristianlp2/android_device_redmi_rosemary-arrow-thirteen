@@ -58,12 +58,11 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio@5.0.vendor \
     android.hardware.bluetooth.a2dp@1.0.vendor \
-    android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.bluetooth.audio-impl \
     android.hardware.broadcastradio@1.0.vendor \
     android.hardware.broadcastradio@1.1.vendor \
     android.hardware.broadcastradio@2.0.vendor \
     android.hardware.bluetooth@1.0.vendor \
-    audio.a2dp.default \
     audio.primary.default \
     audio.r_submix.default \
     audio_policy.stub \
@@ -408,6 +407,7 @@ PRODUCT_COPY_FILES += \
 
 # Overridden props
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+include $(DEVICE_PATH)/props/overrides.mk
 
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
